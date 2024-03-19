@@ -1,0 +1,103 @@
+                                    opps
+
+class Mobile:
+    def __init__(self,brand,battery,ram,rom):
+        self.brand=brand
+        self.battery=battery
+        self.ram=ram
+        self.rom=rom
+    def display(self):
+        print("brand:",self.brand)
+        print("battery:",self.battery)
+        print("ram:",self.ram)
+        print("rom:",self.rom)
+        print("---------------------")
+
+obj=Mobile('apple','4500','8','64')
+obj.display()
+obj=Mobile('onepplus','4500','8','64')
+obj.display()
+
+class Mobile:
+    def __init__(self,):
+        print("man")
+    def display(self):
+        print("ksab")
+obj=Mobile()
+obj.display()
+
+
+
+                                        #single inh
+class Parent:
+    def fun1(self):
+        print("THIS IS parent class")
+class Child(Parent):
+    def fun2(self):
+        print("THIS IS child class")
+
+obj=Child()
+obj.fun1()
+obj.fun2()
+
+
+
+
+
+
+
+                                      #mulati level inh
+class Parent:
+    def fun1(self):
+        print("THIS IS parent class")
+class Child(Parent):
+    def fun2(self):
+        print("THIS IS child class")
+class Child2(Child):                 #class Child2(Parent) this is error and also hiracal: 
+    def fun3(self):
+        print("THIS IS child 2 class")
+
+obj=Child2()
+obj.fun1()
+obj.fun2()
+obj.fun3()
+
+
+                                       #mulatipule inh
+class Parent:
+    def fun1(self):
+        print("THIS IS parent class")
+class Parent2:
+    def fun2(self):
+        print("THIS IS parent2 class")
+class Child(Parent,Parent2):  
+    def fun3(self):
+        print("THIS IS child class")
+
+obj=Child()
+obj.fun1()
+obj.fun2()
+obj.fun3()
+
+
+                                              #super 
+class A:
+    def __init__(self):
+        print("THIS IS class A")
+    def fun1(self):
+        print('this is fun1')
+class B(A):
+    def __init__(self):
+        print("THIS IS class B")
+        super().__init__()
+    def fun2(self):
+        print('this is fun2')
+
+l=obj=B()
+print(id(l))
+print(id(obj))
+print(id(B()))
+
+                            polymorphism
+method overloding
+method overrading
